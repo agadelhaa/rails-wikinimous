@@ -1,0 +1,10 @@
+<div class="navbar">
+<%= link_to "New article", articles_new_path %>
+</div>
+<br>
+<% @articles.each do |article| %>
+  <div class="article">
+    <h2><%= link_to " Title: #{article.title} ", article_path(article.id) %></h2>
+    <p><%= " #{article.content} " %></p>
+  </div>
+<% end %>
